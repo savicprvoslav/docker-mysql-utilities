@@ -20,4 +20,7 @@ docker run -i -t --link mysql:mysql mysql/utils:1.0 bash
 mysqldiff --server2=root:xxx@mysql:3306 --server1=root:xxx@mysql:3306 --difftype=sql --force   --changes-for=server2 newDb:oldDb
 ```
 
+## Run And Diff in the same time
+docker run -i -t --link mysql:mysql mysql/utils:1.0 sh -c "mysqldiff --server2=root:xxx@mysql:3306 --server1=root:xxx@mysql:3306 --difftype=sql --force   --changes-for=server2 newDb:oldDb"
+
 // TODO Change ubuntu image 
